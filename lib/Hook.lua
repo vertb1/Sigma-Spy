@@ -109,13 +109,20 @@ function Hook:HookMeta()
 	})
 end
 
-function Hook:Index(Object: Instance, Key: string)
-	local OrignalIndex = self.OrignalIndex
-	if OrignalIndex then
-		return OrignalIndex(Object, Key)
+function Hook:Index(Object, Key: string)
+	if typeof(Object) == "Instance" then
+		local OrignalIndex = self.OrignalIndex
+		if OrignalIndex then
+			return OrignalIndex(Object, Key)
+		end
 	end
-
-	return Object[Key]
+	local ok, result = pcall(function()
+		return Object[Key]
+	end)
+	if ok then
+		return result
+	end
+	return nil
 end
 
 function Hook:Init(Data)
