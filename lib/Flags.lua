@@ -7,24 +7,39 @@ type Flag = {
 type Flags = {
     [string]: Flag
 }
+type table = {
+    [any]: any
+}
 
 local Module = {
     Flags = {
-        PreventRenaming = {
+        -- PreventRenaming = {
+        --     Value = false,
+        --     Label = "No renaming",
+        -- },
+        -- PreventParenting = {
+        --     Value = false,
+        --     Label = "No parenting",
+        -- },
+        NoComments = {
             Value = false,
-            Label = "No renaming",
+            Label = "No comments",
         },
-        PreventParenting = {
+        SelectNewest = {
             Value = false,
-            Label = "No parenting",
+            Label = "Auto select newest",
+        },
+        DecompilePopout = { -- Lovre SHUSH
+            Value = false,
+            Label = "Pop-out decompiles",
         },
         IgnoreNil = {
             Value = true,
             Label = "Ignore nil parents",
         },
-        CheckCaller = {
-            Value = false,
-            Label = "Ignore exploit calls",
+        LogExploit = {
+            Value = true,
+            Label = "Log exploit calls",
         },
         LogRecives = {
             Value = true,
@@ -52,6 +67,14 @@ local Module = {
             Value = false,
             Label = "No grouping"
         },
+        TableArgs = {
+            Value = false,
+            Label = "Table args"
+        },
+        NoVariables = {
+            Value = false,
+            Label = "No compression"
+        }
     }
 }
 
