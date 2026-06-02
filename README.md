@@ -29,7 +29,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Awakenchan/Sigma-Spy/
 <table>
 	<tr>
 		<td>
-			<img src="https://github.com/user-attachments/assets/ff4f9de3-a70c-4d5c-a94f-6ba6b58d2534">
+			<img src="https://github.com/user-attachments/assets/d1a1c86c-008c-49bf-ba06-f66c143fff29">
       Parser output example
 		</td>
     <td width="58%">
