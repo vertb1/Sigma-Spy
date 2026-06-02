@@ -77,9 +77,9 @@ function Hook:ReplaceMetaMethod(Object: Instance, Call: string, Callback: MetaFu
 	local HookMethod = GetHook()
 
 	local OriginalFunc
-	OriginalFunc = clonefunction(HookMethod(Metatable[Call], newcclosure(function(...)
+	OriginalFunc = HookMethod(Metatable[Call], function(...)
 		return HookMiddle(OriginalFunc, Callback, false, ...)
-	end)))
+	end)
 
 	return OriginalFunc
 end
