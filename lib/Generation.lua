@@ -12,8 +12,6 @@ function ParserModule:Import(Name: string)
 	local Url = `{self.ImportUrl}/{Name}.lua`
 	return loadstring(game:HttpGet(Url))()
 end
-ParserModule:Load()
-
 --// Modules
 local Config
 local Hook
