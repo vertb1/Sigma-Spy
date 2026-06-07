@@ -345,7 +345,13 @@ function Hook:BeginService(Libraries, ExtraData, ChannelId, ...)
 		Services = setmetatable({}, {
 			__index = function(self, Name: string): Instance
 				local Service = game:GetService(Name)
-				return cloneref(Service)
+				if type(cloneref) == "function" then
+					local ok, ref = pcall(cloneref, Service)
+					if ok and ref ~= nil then
+						return ref
+					end
+				end
+				return Service
 			end,
 		})
 	}
