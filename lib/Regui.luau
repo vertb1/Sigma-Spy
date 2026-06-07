@@ -22,8 +22,8 @@ local SafeCloneref = function(inst)
     end
     local ok, ref = pcall(cloneref, inst)
     if ok and ref ~= nil then
-        local ok2 = pcall(function() return ref.ClassName end)
-        if ok2 then
+        local ok2, class = pcall(function() return ref.ClassName end)
+        if ok2 and typeof(class) == "string" then
             return ref
         end
     end
