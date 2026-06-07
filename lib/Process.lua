@@ -100,10 +100,17 @@ local InstanceCreatedRemotes: typeof(setmetatable({} :: {[Event]: true}, {__mode
 })
 
 local function SafeCloneref(inst)
-    if inst == nil then
-        return nil
+    if typeof(inst) ~= "Instance" then
+        return inst
     end
     if type(cloneref) ~= "function" then
+        return inst
+    end
+    local isService = false
+    pcall(function()
+        isService = (game:GetService(inst.ClassName) == inst)
+    end)
+    if not isService then
         return inst
     end
     local ok, ref = pcall(cloneref, inst)
