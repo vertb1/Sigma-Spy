@@ -1016,12 +1016,12 @@ RatioAspectType=Enum.AspectType.ScaleWithParentSize})local ah,aj,ak,b=ag.Ratio,
 ag.RatioAxis,ag.RatioAspectType,aa:GetChildOfClass(ae,'UIAspectRatioConstraint')
 aa:SetProperties(b,{DominantAxis=aj,AspectType=ak,AspectRatio=ah})end},{
 Properties={'FlexMode'},Callback=function(ad,ae,af)local ag=aa:GetChildOfClass(
-ae,'UIFlexItem')ag.FlexMode=af end},{Properties={'CornerRadius'},Callback=
-function(ad,ae,af)local ag=aa:GetChildOfClass(ae,'UICorner')ag.CornerRadius=af
-end},{Properties={'Fill'},Callback=function(ad,ae,af)if af~=true then return end
+ae,'UIFlexItem')if ag then ag.FlexMode=af end end},{Properties={'CornerRadius'},Callback=
+function(ad,ae,af)local ag=aa:GetChildOfClass(ae,'UICorner')if ag then ag.CornerRadius=af
+end end},{Properties={'Fill'},Callback=function(ad,ae,af)if af~=true then return end
 local ag=ad.Class aa:CheckConfig(ag,{Size=UDim2.fromScale(1,1),UIFlexMode=Enum.
 UIFlexMode.Fill,AutomaticSize=Enum.AutomaticSize.None})local ah=aa:
-GetChildOfClass(ae,'UIFlexItem')ah.FlexMode=ag.UIFlexMode ae.Size=ag.Size ae.
+GetChildOfClass(ae,'UIFlexItem')if ah then ah.FlexMode=ag.UIFlexMode end ae.Size=ag.Size ae.
 AutomaticSize=ag.AutomaticSize end},{Properties={'Label'},Callback=function(ad,
 ae,af)local ag,ah=ad.Class,ae:FindFirstChild'Label'if not ah then return end ah.
 Text=SafeString(af)function ag:SetLabel(aj)ah.Text=aj return self end end},{
