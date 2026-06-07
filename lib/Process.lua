@@ -108,7 +108,10 @@ local function SafeCloneref(inst)
     end
     local ok, ref = pcall(cloneref, inst)
     if ok and ref ~= nil then
-        return ref
+        local ok2 = pcall(function() return ref.ClassName end)
+        if ok2 then
+            return ref
+        end
     end
     return inst
 end
