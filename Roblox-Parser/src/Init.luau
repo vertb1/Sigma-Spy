@@ -7,10 +7,10 @@ type Table = {
 local Module = {
 	--// Package data
 	Version = "1.0.8",
-	Author = "Depso",
+	Author = "vertb1",
 	License = "GNU-GPLv3",
-	Repository = "https://github.com/depthso/Roblox-parser",
-	ImportUrl = "https://raw.githubusercontent.com/depthso/Roblox-parser/refs/heads/main",
+	Repository = "https://github.com/vertb1/Sigma-Spy/tree/main/Roblox-Parser",
+	ImportUrl = "https://raw.githubusercontent.com/vertb1/Sigma-Spy/refs/heads/main/Roblox-Parser",
 
 	Modules = {
 		Formatter = require("@src/Formatter"),

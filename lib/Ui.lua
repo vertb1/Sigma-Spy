@@ -1,6 +1,6 @@
 local Ui = {
 	DefaultEditorContent = [=[--[[
-	Sigma Spy, written by depso
+	Sigma Spy, written by vertb1
 	Hooks rewritten and many more fixes!
 
 	Discord: https://discord.gg/bkUkm2vSbv
@@ -490,7 +490,7 @@ function Ui:ConsoleTab(InfoSelector)
 
 	--// Create console
 	Console = Tab:Console({
-		Text = "-- Created by depso",
+		Text = "-- Created by vertb1",
 		ReadOnly = true,
 		Border = false,
 		Fill = true,
@@ -586,7 +586,7 @@ function Ui:AddDetailsSection(OptionsTab)
 	OptionsTab:Separator({Text="Information"})
 	OptionsTab:BulletText({
 		Rows = {
-			"Sigma spy - Written by depso!",
+			"Sigma spy - Written by vertb1!",
 			"Libraries: Roblox-Parser, Dear-ReGui",
 			"Thank you syn.lua for suggesting I make this"
 		}

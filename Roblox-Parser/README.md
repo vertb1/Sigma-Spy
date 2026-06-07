@@ -52,5 +52,5 @@ heres the loadstring for library if you want to use it on executors
 it works in studio too you know
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/depthso/Roblox-parser/refs/heads/main/dist/Main.luau"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vertb1/Sigma-Spy/refs/heads/main/Roblox-Parser/dist/Main.luau"))()
 ```

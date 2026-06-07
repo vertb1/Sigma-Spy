@@ -99,6 +99,20 @@ local InstanceCreatedRemotes: typeof(setmetatable({} :: {[Event]: true}, {__mode
     __mode = "k"
 })
 
+local function SafeCloneref(inst)
+    if inst == nil then
+        return nil
+    end
+    if type(cloneref) ~= "function" then
+        return inst
+    end
+    local ok, ref = pcall(cloneref, inst)
+    if ok and ref ~= nil then
+        return ref
+    end
+    return inst
+end
+
 function Process:Merge(Base: table, New: table)
     if not New then return end
 	for Key, Value in next, New do
@@ -182,7 +196,7 @@ function Process:CheckValue(Value, Ignore: table?, Cache: table?)
     if Type == "table" then
         Value = self:DeepCloneTable(Value, Ignore, Cache)
     elseif Type == "Instance" then
-        Value = cloneref(Value)
+        Value = SafeCloneref(Value)
     end
     
     return Value
@@ -570,7 +584,7 @@ function Process:ProcessRemote(Data: RemoteData, Remote, ...): table?
 
     --// Add to queue
     self:Merge(Data, {
-        Remote = cloneref(Remote),
+        Remote = SafeCloneref(Remote),
 		CallingScript = getcallingscript(),
         CallingFunction = CallingFunction,
         SourceScript = SourceScript,
