@@ -105,7 +105,7 @@ function Ui:Init(Data)
 	Files = Modules.Files
 
 	--// ReGui
-    ReGui = loadstring(game:HttpGet('https://raw.githubusercontent.com/Awakenchan/Sigma-Spy/refs/heads/main/lib/Regui.luau'))()
+    ReGui = loadstring(game:HttpGet('https://raw.githubusercontent.com/vertb1/Sigma-Spy/refs/heads/main/lib/Regui.luau'))()
 	self:LoadFont()
 	self:LoadReGui()
 	self:CheckScale()
@@ -560,7 +560,7 @@ function Ui:MakeOptionsTab(InfoSelector)
 			{
 				Text = "Copy Github",
 				Callback = function()
-					self:SetClipboard("https://github.com/depthso/Sigma-Spy")
+					self:SetClipboard("https://github.com/vertb1/Sigma-Spy")
 				end,
 			},
 			{

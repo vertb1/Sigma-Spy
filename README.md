@@ -8,8 +8,8 @@ A complete Remote Spy with an incredible parser that captures Client receives an
 
 ## Loadstring
 ```lua
---// Sigma Spy @depso > active fork by @awakenkn
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Awakenchan/Sigma-Spy/refs/heads/main/Main.lua"), "Sigma Spy")()
+--// Sigma Spy @depso > active fork by @vertb1
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vertb1/Sigma-Spy/refs/heads/main/Main.lua"), "Sigma Spy")()
 ```
 
 ## Features ⚡

@@ -1,4 +1,4 @@
---@awakenkn comments were not by me, i just fixed it being fuckass :errorline: detection.
+--@vertb1 comments were not by me, i just fixed it being fuckass :errorline: detection.
 
 local Hook = {
 	OriginalNamecall = nil,

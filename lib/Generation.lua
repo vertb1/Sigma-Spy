@@ -16,7 +16,7 @@ type RemoteData = {
 --// Module
 local Generation = {
 	DumpBaseName = "SigmaSpy-Dump %s.lua", -- "-- Generated with sigma spy BOIIIIIIIII (+9999999 AURA)\n"
-	Header = "-- Generated with Sigma Spy BOI @awaken was here",
+	Header = "-- Generated with Sigma Spy BOI @vertb1 was here",
 	ScriptTemplates = {
 		["Remote"] = {
 			{"%RemoteCall%"}
@@ -61,7 +61,7 @@ local Generation = {
 --// Modules
 local Config
 local Hook
-local ParserModule = loadstring(game:HttpGet('https://raw.githubusercontent.com/Awakenchan/Sigma-Spy/refs/heads/main/lib/RobloxParser'))()
+local ParserModule = loadstring(game:HttpGet('https://raw.githubusercontent.com/vertb1/Sigma-Spy/refs/heads/main/lib/RobloxParser'))()
 
 local Flags
 local ThisScript = script
